@@ -42,7 +42,7 @@ func main() {
 	v1 := router.Group("/api/v1")
 	docs.SwaggerInfo.BasePath = "/api/v1/employee"
 	routes.CreateRouterForEmployee(v1)
-	url := ginSwagger.URL("http://3.239.104.29:9090/swagger/doc.json")
+	url := ginSwagger.URL("http://34.237.142.195:9090/swagger/doc.json")
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler, url))
 	router.Run(":9090")
 }
